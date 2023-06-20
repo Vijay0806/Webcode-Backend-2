@@ -38,8 +38,7 @@ try{
   }catch(error){
     console.log("Error: " +error);
   }   
-mongoose
-  .connect(DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() =>
     app.listen(PORT, () => {
       console.log(`This Node server running on port ${PORT}`);
